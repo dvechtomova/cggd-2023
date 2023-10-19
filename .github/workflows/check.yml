@@ -20,6 +20,10 @@ jobs:
           .\build\Release\Rasterization.exe --model_path models\cube.obj --result_path rasterization_cube.png
           .\build\Release\Rasterization.exe --model_path models\z_test.obj --result_path rasterization_z_test.png
           .\build\Release\Rasterization.exe --model_path models\CornellBox-Original.obj --result_path rasterization_CornellBox-Original.png
+
+          .\build\Release\Rasterization.exe --model_path models\cube.obj --result_path rasterization_cube_grid5.png --grid 5
+          .\build\Release\Rasterization.exe --model_path models\z_test.obj --result_path rasterization_z_test_grid50.png --grid 50
+          .\build\Release\Rasterization.exe --model_path models\CornellBox-Original.obj --result_path rasterization_CornellBox-Original_grid500.png --grid 500
       - name: Upload rasterization images
         uses: actions/upload-artifact@v3
         with:
